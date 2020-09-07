@@ -1,7 +1,4 @@
 class TweetsController < ApplicationController
-configure do
-  enable :sessions
-end
 
   get '/tweets' do
     #binding.pry
