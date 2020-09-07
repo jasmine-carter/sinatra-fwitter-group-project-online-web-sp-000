@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
 
   get '/tweets' do
+    binding.pry
     @user = current_user
     if !logged_in?
       redirect "/login"
