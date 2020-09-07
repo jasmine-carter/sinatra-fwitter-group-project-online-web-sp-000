@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
   get '/tweets' do
     binding.pry
     @user = current_user
-    @tweets = Tweets.all
+    @tweets = Tweet.all
     if !logged_in?
       redirect "/login"
     else
