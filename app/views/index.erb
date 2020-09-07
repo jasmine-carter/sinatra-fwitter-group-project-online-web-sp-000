@@ -2,9 +2,6 @@
 
 <% if logged_in? %>
   <p>Welcome, <%=@user.username %> </p>
-
-<p>Tweet Something!</p>
-
 <% else %>
   <a href="/signup">Sign Up </a>
   <a href="/login">Sign In </a>
