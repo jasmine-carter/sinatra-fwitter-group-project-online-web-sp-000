@@ -51,7 +51,7 @@ use Rack::Flash
 
   #shows all a single users tweets (no login needed?)
   get '/users/:slug' do
-    #binding.pry
+    binding.pry
     @user = User.find_by(username: params[:slug])
   end
 end
