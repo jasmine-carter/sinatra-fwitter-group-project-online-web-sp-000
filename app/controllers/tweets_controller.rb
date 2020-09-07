@@ -20,7 +20,7 @@ class TweetsController < ApplicationController
   end
 
   post '/tweets' do
-    binding.pry
+    #binding.pry
     if params[:content] == nil || " " || ""
     @tweet = Tweet.new(content: params["content"], user_id: session[:user_id])
     @tweet.save
