@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 use Rack::Flash
 
   get '/signup' do
+    binding.pry
       if session[:user_id] == nil
         erb :'users/signup'
       else redirect "/tweets"
