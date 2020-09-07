@@ -19,7 +19,7 @@ class TweetsController < ApplicationController
     end
   end
 
-  post '/tweets/new' do
+  post '/tweets' do
     binding.pry
   end
 
