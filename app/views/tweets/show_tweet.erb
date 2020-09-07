@@ -4,5 +4,10 @@
 <p>Delete Tweet</p>
 <form method="POST" action="/tweets/delete">
   <label for "content">Delete That Tweet! </label>
-  <input type="submit" id="submit" value="Tweet that Tweet!">
+  <input type="submit" id="delete" value="Tweet that Tweet!">
+</form>
+
+<form method="PATCH" action="/tweets/:id">
+<label for "content">Edit That Tweet!</label>
+<input type="submit" id="edit" value="Edit That Tweet!">
 </form>
