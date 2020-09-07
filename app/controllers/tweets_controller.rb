@@ -21,7 +21,7 @@ class TweetsController < ApplicationController
 
   post '/tweets' do
     binding.pry
-    if params[:content] == nil || " " || ""
+    if params[:content] == nil || params[:content] ==" " || params[:content] == ""
       @tweet = Tweet.new(content: params["content"], user_id: session[:user_id])
       @tweet.save
       redirect "/tweets"
