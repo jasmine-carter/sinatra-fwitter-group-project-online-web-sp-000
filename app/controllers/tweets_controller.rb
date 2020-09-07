@@ -27,7 +27,7 @@ class TweetsController < ApplicationController
     else
       @tweet = Tweet.new(content: params["content"], user_id: session[:user_id])
       @tweet.save
-      redirect "/tweets"
+      redirect "/tweets/new"
     end
   end
 
