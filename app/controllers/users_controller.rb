@@ -9,7 +9,7 @@ use Rack::Flash
   end
 
   post '/signup' do
-    #binding.pry
+    ßbinding.pry
       if params[:username] == "" || params[:email] == "" || params[:password] == ""
         flash[:message] = "Please register with a Username and Email and Password."#raise error
         redirect "/signup"
