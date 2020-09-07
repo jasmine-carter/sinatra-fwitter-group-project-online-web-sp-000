@@ -19,7 +19,7 @@ class TweetsController < ApplicationController
     end
   end
 
-  post '/tweets' do
+  post '/tweets/new' do
     #binding.pry
     if params[:content] == nil || params[:content] ==" " || params[:content] == ""
       flash[:message] = "Please create a tweet with content!"
