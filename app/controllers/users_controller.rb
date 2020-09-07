@@ -23,7 +23,7 @@ use Rack::Flash
 
   get '/login' do
     if logged_in?
-      redirect to "/index"
+      redirect to "/tweets"
     else
       erb :'/users/login'  #if user is not logged in loads login erb and redirects to tweets index
     end
