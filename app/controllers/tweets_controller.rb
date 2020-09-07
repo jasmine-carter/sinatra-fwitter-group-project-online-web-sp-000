@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
 configure do
   enable :sessions
 end
-end
+
   get '/tweets' do
     #binding.pry
     @user = current_user
