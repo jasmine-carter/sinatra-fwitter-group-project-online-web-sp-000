@@ -31,4 +31,7 @@ class TweetsController < ApplicationController
     end
   end
 
+  get '/tweets/:id' do
+    binding.pry
+  end
 end
