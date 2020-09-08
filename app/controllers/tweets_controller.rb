@@ -47,12 +47,12 @@ class TweetsController < ApplicationController
 
   patch '/tweets/:id' do
     binding.pry
-    if params[:content] != nil && params[:content] != " " && params[:content] != ""
-      @tweet = Tweet.find_by(id: params[:id])
-      @tweet.update(content: params[:content])
-    else
+    if params[:content]== "" && params[:content] == nil && params[:content] == " "
       flash[:message] = "You cannot update a tweet to be blank."
       redirect "/tweets/#{params[:id]}/edit"
+    else
+      @tweet = Tweet.find_by(id: params[:id])
+      @tweet.update(content: params[:content])
     end
   end
 
