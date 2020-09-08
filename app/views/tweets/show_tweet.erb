@@ -2,7 +2,7 @@
 <li><%=@tweet.user.username%></li>
 
   <p>Delete Tweet</p>
-  <form method="POST" action="/tweets/delete">
+  <form method="POST" action="/tweets/:id/delete">
     <label for "content">Delete That Tweet! </label>
     <input type="submit" id="Delete Tweet" value="Yeet that Tweet!">
   </form>
