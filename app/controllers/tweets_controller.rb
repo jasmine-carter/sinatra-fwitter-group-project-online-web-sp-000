@@ -67,7 +67,7 @@ use Rack::Flash
     end
   end
 
-  delete '/tweets/:id' do
+  delete '/tweets/:id/delete' do
     if logged_in?
       @tweet = Tweet.find_by(id: params[:id])
       if current_user.id == @tweet.id
