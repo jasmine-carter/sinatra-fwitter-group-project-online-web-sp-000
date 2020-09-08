@@ -45,7 +45,7 @@ class TweetsController < ApplicationController
     end
   end
 
-  patch '/tweets/:id' do
+  patch '/tweets/:id/edit' do
     #binding.pry
     if params[:content] != nil || params[:content] != " " || params[:content] != ""
       @tweet = Tweet.find_by(id: params[:id])
