@@ -1,4 +1,5 @@
 class TweetsController < ApplicationController
+use Rack::Flash
 
   get '/tweets' do
     #binding.pry
