@@ -53,6 +53,7 @@ class TweetsController < ApplicationController
     else
       flash[:message] = "You cannot update a tweet to be blank."
       redirect "/tweets"
+    end
   end
 
   get '/tweets/:id' do
