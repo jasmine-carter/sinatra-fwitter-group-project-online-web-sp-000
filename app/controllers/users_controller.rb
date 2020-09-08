@@ -37,7 +37,7 @@ use Rack::Flash
         session[:user_id] = @user.id
         redirect "/tweets"
     else
-      #flash[:message] = "Your username or password was incorect."
+      flash[:message] = "Your username or password was incorect."
       redirect "/signup"
     end
   end
