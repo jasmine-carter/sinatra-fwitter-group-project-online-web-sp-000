@@ -46,7 +46,7 @@ class TweetsController < ApplicationController
   end
 
   patch '/tweets/:id' do
-    binding.pry
+    #binding.pry
     if params[:content]== "" || params[:content] == nil || params[:content] == " "
       flash[:message] = "You cannot update a tweet to be blank."
       redirect "/tweets/#{params[:id]}/edit"
