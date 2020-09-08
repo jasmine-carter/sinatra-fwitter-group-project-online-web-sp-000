@@ -52,7 +52,7 @@ class TweetsController < ApplicationController
       @tweet.update(content: params[:content])
     else
       flash[:message] = "You cannot update a tweet to be blank."
-      redirect "/tweets/#{@tweet.id}/edit"
+      redirect "/tweets/#{params[:id]}/edit"
     end
   end
 
