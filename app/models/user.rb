@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
    username.split.join("-").downcase
   end
 
+  def self.find_by_slug(slug)
+  end
 end
