@@ -30,6 +30,7 @@ class TweetsController < ApplicationController
       redirect "/tweets/new"
     end
   end
+
   get '/tweets/:id/edit' do
     #binding.pry
     @tweet = Tweet.find_by(id: params[:id])
@@ -42,6 +43,10 @@ class TweetsController < ApplicationController
     else
       redirect "login"
     end
+  end
+
+  patch '/tweets/:id' do
+    binding.pry
   end
 
   get '/tweets/:id' do
