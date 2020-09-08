@@ -67,4 +67,18 @@ use Rack::Flash
     end
   end
 
+  delete '/tweets/:id' do
+    if logged_in?
+      @tweet = Tweet.find_by(id: params[:id])
+      if current_user.id == @tweet.id
+        "woo"
+      else
+        redirect "/tweets"
+      end
+    else
+      redirect "/login"
+    end
+  end
+
+
 end
